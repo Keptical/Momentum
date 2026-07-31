@@ -24,8 +24,9 @@ class DashboardScreen extends StatelessWidget {
       ),
 
 
-      body: const Center(
-
+      body: 
+      const Center(
+        
         child: Text(
           "Dashboard coming soon 🚀",
           style: TextStyle(
@@ -34,7 +35,7 @@ class DashboardScreen extends StatelessWidget {
         ),
 
       ),
-
+      
     );
 
   }

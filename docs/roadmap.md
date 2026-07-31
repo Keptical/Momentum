@@ -15,7 +15,6 @@ Momentum is a mobile app designed to help users build consistency across fitness
 - Planner
 - Basic statistics
 
-
 - Primary Navigation : (bottomNavBar) Things users do everyday, 
 - Secondary Navigation : (TopBar, showing username and pfp) Things users want but dont need permanently displayed.
 ---
