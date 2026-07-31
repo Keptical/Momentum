@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../shared/widgets/momentum_logo.dart';
 import '../../../shared/widgets/momentum_button.dart';
 import '../../../shared/widgets/momentum_text_field.dart';
-import '../../dashboard/presentation/dashboard_screen.dart';
-
+import '../../navigation/presentation/main_navigation_screen.dart';
 class LoginScreen extends StatefulWidget {
 
   const LoginScreen({
@@ -43,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
         context,
         MaterialPageRoute(
           builder: (context) =>
-              const DashboardScreen(),
+              const MainNavigationScreen(),
         ),
       );
 

@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:momentum/core/theme/app_theme.dart';
+import 'package:momentum/features/dashboard/presentation/dashboard_screen.dart';
+import 'package:momentum/features/habits/presentation/habits_screen.dart';
+import 'package:momentum/features/planner/presentation/planner_screen.dart';
+import 'package:momentum/features/profile/presentation/profile_screen.dart';
+import 'package:momentum/features/workouts/presentation/workout_screen.dart';
 
 class MainNavigationScreen extends StatefulWidget {
 
@@ -13,16 +19,22 @@ class MainNavigationScreen extends StatefulWidget {
 
 
 class _MainNavigationScreenState extends State<MainNavigationScreen> {
-  
+
 
   int _selectedIndex = 0;
-
+  final List<Widget> _screens = [
+    DashboardScreen(), 
+    const WorkoutScreen(), 
+    const HabitsScreen(), 
+    const PlannerScreen(), 
+    const ProfileScreen()
+  ];
 
 
 void _onItemTapped(int index) {
      setState((){
-
-    _selectedIndex = index;
+      _selectedIndex = index;
+     _screens[_selectedIndex];
 
      });
 }
@@ -31,14 +43,9 @@ void _onItemTapped(int index) {
 Widget build(BuildContext context) {
  
     return Scaffold(
-      body: Center(
-        child: _selectedIndex == 0
-            ? const Text("Home Screen")
-            : _selectedIndex == 1
-                ? const Text("Search Screen")
-                : const Text("Profile Screen"),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
+
+        body: _screens[_selectedIndex],
+        bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -62,7 +69,8 @@ Widget build(BuildContext context) {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        unselectedItemColor: AppTheme.unselectedLightGray,
+        selectedItemColor: AppTheme.primaryOrange,
         onTap: _onItemTapped,
       ),
     );
