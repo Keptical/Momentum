@@ -34,7 +34,6 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
 void _onItemTapped(int index) {
      setState((){
       _selectedIndex = index;
-     _screens[_selectedIndex];
 
      });
 }
@@ -45,33 +44,65 @@ Widget build(BuildContext context) {
     return Scaffold(
 
         body: _screens[_selectedIndex],
-        bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
+        bottomNavigationBar: NavigationBarTheme(
+            data: NavigationBarThemeData(
+              indicatorColor: AppTheme.primaryOrange.withValues(alpha: 0.2),
+              
+              iconTheme: WidgetStateProperty.resolveWith((states) {
+                if (states.contains(WidgetState.selected)) {
+                  return IconThemeData(
+                  color: AppTheme.primaryOrange,
+                  );
+                }
+              
+              
+              return IconThemeData(
+              color: AppTheme.unselectedLightGray,
+              );
+            }),
+
+            labelTextStyle: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.selected)) {
+            return TextStyle(
+            color: AppTheme.primaryOrange,
+            fontWeight: FontWeight.bold,
+              );
+            }
+
+            return TextStyle(
+            color: AppTheme.unselectedLightGray,
+            );
+            }),
+            ),
+          
+          child: NavigationBar(
+
+          selectedIndex: _selectedIndex,
+          onDestinationSelected: _onItemTapped,
+
+          destinations: const [
+          NavigationDestination(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
+          NavigationDestination(
             icon: Icon(Icons.fitness_center),
             label: 'Workout',
           ),
-          BottomNavigationBarItem(
+          NavigationDestination(
             icon: Icon(Icons.check_box),
             label: 'Habits',
           ), 
-          BottomNavigationBarItem(
+          NavigationDestination(
             icon: Icon(Icons.calendar_month),
             label: 'Planner',
           ),  
-          BottomNavigationBarItem(
+          NavigationDestination(
             icon: Icon(Icons.person),
             label: 'Profile',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        unselectedItemColor: AppTheme.unselectedLightGray,
-        selectedItemColor: AppTheme.primaryOrange,
-        onTap: _onItemTapped,
+            ),
+          ],
+        ),
       ),
     );
   }
