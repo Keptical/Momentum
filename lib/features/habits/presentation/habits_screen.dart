@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:momentum/shared/widgets/momentum_card.dart';
+import 'package:momentum/core/theme/app_theme.dart';
 
 class HabitsScreen extends StatelessWidget {
   const HabitsScreen({super.key});
@@ -7,10 +9,35 @@ class HabitsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Habits"),
+        title: Text("Habits",
+        style: Theme.of(context).textTheme.headlineSmall,
       ),
-      body: const Center(
-        child: Text("Habits coming soon 🌱"),
+    ),
+      
+      
+      body: SingleChildScrollView(
+        
+        child: Column(
+
+         children: [
+
+          MomentumCard(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Current streak",
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+              Text(
+                "7 days 🔥",
+                style: Theme.of(context).textTheme.headlineMedium,
+              )
+            ]
+          )
+          ),
+         ],
+        ),
       ),
     );
   }

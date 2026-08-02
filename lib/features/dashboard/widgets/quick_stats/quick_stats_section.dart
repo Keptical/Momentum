@@ -1,31 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:momentum/features/dashboard/widgets/quick_stats/stats_card.dart';
-import 'package:momentum/shared/widgets/momentum_card.dart';
-
-
 class QuickStatsSection extends StatelessWidget {
   
-  
+  final int workouts;
+  final int streak;
+
   const QuickStatsSection({
     super.key,
+    required this.workouts,
+    required this.streak,
   });
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
 
       children:[
 
         Expanded(
 
-        child: StatsCard(text: "7 day streak 🔥"),
+        child: StatsCard(
+          icon: Icons.local_fire_department,
+          value: streak,
+          label: "Day Streak",
+        ),
 
         ),
-        SizedBox(width: 4),
+        SizedBox(width: 12),
 
         Expanded(
 
-        child: StatsCard(text: "7 workouts this week!"),
+        child: StatsCard(
+          icon: Icons.fitness_center,
+          value: workouts,
+          label: "Workouts this Week",
+        ),
 
         ),
       ],

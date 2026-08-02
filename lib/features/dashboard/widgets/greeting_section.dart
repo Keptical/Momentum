@@ -4,15 +4,16 @@ import 'package:momentum/shared/utils/greeting.dart';
 
 
 class GreetingSection extends StatelessWidget {
-
+final String username;
   const GreetingSection({
     super.key,
+    required this.username,
   });
 
   @override
   Widget build(BuildContext context) {
     return MomentumCard(
-      child: Text("${getGreeting()}, Matt!")
+      child: Text("${getGreeting() + " " + username}!")
       
     );
   }

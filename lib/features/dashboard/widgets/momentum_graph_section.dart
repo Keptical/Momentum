@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'package:momentum/core/theme/app_theme.dart';
 import 'package:momentum/shared/widgets/momentum_card.dart';
-
+import 'package:momentum/core/theme/app_theme.dart';
 
 class MomentumGraphSection extends StatelessWidget {
   
@@ -16,7 +15,16 @@ class MomentumGraphSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MomentumCard(
-      child: SizedBox(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [ 
+          Text (
+            "Momentum",
+            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+              fontWeight: FontWeight.bold,
+              ),
+             ),
+          SizedBox(
         height: 200,
         child: LineChart(
           LineChartData(
@@ -32,6 +40,7 @@ class MomentumGraphSection extends StatelessWidget {
 
           lineBarsData: [
             LineChartBarData(
+              color: AppTheme.primaryOrange,
               spots: values
               .asMap()
               .entries
@@ -53,6 +62,8 @@ class MomentumGraphSection extends StatelessWidget {
           ),
         ),
       )
-    );
+     ],
+    ),
+   );
   }
 }

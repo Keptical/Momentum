@@ -33,13 +33,6 @@ class MomentumCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(borderRadius),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.25),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
-          ),
-        ],
       ),
        child: child,
     );

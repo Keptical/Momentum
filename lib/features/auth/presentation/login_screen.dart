@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-
 import '../../../shared/widgets/momentum_logo.dart';
 import '../../../shared/widgets/momentum_button.dart';
 import '../../../shared/widgets/momentum_text_field.dart';
 import '../../navigation/presentation/main_navigation_screen.dart';
+
+
 class LoginScreen extends StatefulWidget {
 
   const LoginScreen({
@@ -132,15 +133,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 onPressed: () {},
 
-                child: const Text(
+                child: Text(
                   "Don't have an account? Create one",
-                  style: TextStyle(
-                    color: Color(0xFFFF6D00),
-                  ),
-                ),
 
-              )
-
+              ),
+              ),
             ],
           ),
         ),

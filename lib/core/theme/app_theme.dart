@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   static const Color primaryOrange = Color(0xFFFF6D00);
@@ -9,14 +10,21 @@ class AppTheme {
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     scaffoldBackgroundColor: background,
+
+    appBarTheme: const AppBarTheme(
+      backgroundColor: background,
+      surfaceTintColor: Colors.transparent,
+      scrolledUnderElevation: 0,
+      ),
+
+
+    textTheme: GoogleFonts.poppinsTextTheme(
+      ThemeData.dark().textTheme,
+    ),
     colorScheme: const ColorScheme.dark(
       primary: primaryOrange,
     ),
-
     cardColor: card,
-
     useMaterial3: true,
-
-    fontFamily: "Inter",
   );
 }
