@@ -7,7 +7,6 @@ import 'package:momentum/features/profile/presentation/profile_screen.dart';
 import 'package:momentum/features/workouts/presentation/workout_screen.dart';
 
 class MainNavigationScreen extends StatefulWidget {
-
   const MainNavigationScreen({
     super.key,
     });
@@ -25,7 +24,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   final List<Widget> _screens = [
     DashboardScreen(), 
     const WorkoutScreen(), 
-    const HabitsScreen(), 
+    HabitsScreen(), 
     const PlannerScreen(), 
     const ProfileScreen()
   ];

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:momentum/shared/widgets/momentum_card.dart';
-import 'package:momentum/shared/widgets/momentum_checkBox.dart';
+import 'package:momentum/shared/widgets/momentum_checkTile.dart';
 import 'package:momentum/features/planner/models/tasks_model.dart';
 
 class PlannerPreviewSection extends StatelessWidget {

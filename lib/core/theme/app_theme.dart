@@ -6,7 +6,7 @@ class AppTheme {
   static const Color background = Color(0xFF121212);
   static const Color card = Color.fromARGB(255, 65, 60, 60);
   static const Color unselectedLightGray = Color(0xd3d3d3d3);
-
+  
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     scaffoldBackgroundColor: background,

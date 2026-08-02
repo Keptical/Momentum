@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:momentum/shared/widgets/momentum_checkbox.dart';
+import 'package:momentum/shared/widgets/momentum_checkTile.dart';
 import 'package:momentum/shared/widgets/momentum_card.dart';
 import 'package:momentum/features/habits/models/habit_model.dart';
 

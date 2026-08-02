@@ -4,7 +4,7 @@
   import 'package:momentum/features/dashboard/widgets/habits_preview.dart';
   import 'package:momentum/features/dashboard/widgets/momentum_graph_section.dart';
   import 'package:momentum/features/dashboard/widgets/planner_preview.dart';
-import 'package:momentum/features/dashboard/data/mock_dashboard_data.dart';
+  import 'package:momentum/features/dashboard/data/mock_dashboard_data.dart';
 
   class DashboardScreen extends StatelessWidget {
 
