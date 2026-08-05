@@ -15,6 +15,12 @@ class MomentumGraphSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MomentumCard(
+       border: Border(
+        left: BorderSide(color: AppTheme.primaryOrange, width: 0.5),
+        right: BorderSide(color: AppTheme.primaryOrange, width: 0.5),
+        top: BorderSide(color: AppTheme.primaryOrange, width: 0.5),
+        bottom: BorderSide(color: AppTheme.primaryOrange, width: 2),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [ 

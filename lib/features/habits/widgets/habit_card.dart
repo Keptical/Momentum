@@ -1,26 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:momentum/shared/widgets/momentum_card.dart';
-import 'package:momentum/shared/widgets/momentum_checkTile.dart';
+import 'package:momentum/shared/widgets/momentum_checktile.dart';
 import '../data/habits_data.dart';
-
 class HabitsCard extends StatelessWidget {
-  const HabitsCard({super.key});
+  final VoidCallback? onTap;
+
+  const HabitsCard({
+    super.key,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return MomentumCard(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+    return GestureDetector(
+      onTap: onTap,
 
-              ...habits.map(
-                (habit) => MomentumCheckbox(
+      child: MomentumCard(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+
+            ...habits.map(
+              (habit) => IgnorePointer(
+                ignoring: false,
+                child: MomentumCheckbox(
                   string: habit.name,
                   completed: habit.completed,
                   onChanged: (value) {},
+                ),
+              ),
             ),
-          ),
-        ],
+
+          ],
+        ),
       ),
     );
   }

@@ -9,22 +9,20 @@ class MomentumCard extends StatelessWidget {
   final Color borderColor;
   final double borderRadius;
   final EdgeInsets padding;
+  final Border? border;
   //final VoidCallback? onTap;
-
-
-
 
   const MomentumCard({
     super.key,
 
     required this.child,
-    this.backgroundColor = AppTheme.card,
+    this.backgroundColor = AppTheme.background,
     this.borderColor = AppTheme.primaryOrange,
     this.borderRadius = 16,
     this.padding = const EdgeInsets.all(16),
+    this.border,
     // this.onTap
   });
-
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +31,8 @@ class MomentumCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(borderRadius),
+        border: border ?? Border.all(color: borderColor.withValues(alpha: 0.5), width: 1), 
+
       ),
        child: child,
     );

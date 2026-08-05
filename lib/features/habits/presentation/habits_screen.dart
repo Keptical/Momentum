@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:momentum/core/theme/app_theme.dart';
 import 'package:momentum/features/habits/widgets/habit_card.dart';
+import 'package:momentum/features/habits/widgets/habits_addbutton.dart';
+
 class HabitsScreen extends StatelessWidget {
 
 
@@ -11,9 +13,14 @@ class HabitsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
-        title: Text("Habits",
-        style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+        title: Text(
+          "Habits",
+        style: Theme.of(context)
+        .textTheme
+        .headlineSmall
+        ?.copyWith(
           color: AppTheme.primaryOrange,
           fontWeight: FontWeight.bold,
         ),
@@ -23,20 +30,24 @@ class HabitsScreen extends StatelessWidget {
       body: SafeArea(
       bottom: false,
         child: SingleChildScrollView(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
          children: [
-
-         Text(
-                "Todays's habit's",
-                style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                  fontSize: 20
+          
+            Text("Todays's habit's",
+                style: Theme.of(context).textTheme.headlineLarge?.copyWith(
+                fontSize: 20
                 ),
               ),
+              
               const SizedBox(height: 16),
 
               const HabitsCard(),
+
+              const SizedBox(height: 16),
+
+              const HabitsAddButton()
             ]
           ),
         ),

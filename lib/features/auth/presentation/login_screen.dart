@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:momentum/features/auth/presentation/create_login_screen.dart';
 import '../../../shared/widgets/momentum_logo.dart';
 import '../../../shared/widgets/momentum_button.dart';
+import '../../../shared/widgets/momentum_textbutton.dart';
 import '../../../shared/widgets/momentum_text_field.dart';
 import '../../navigation/presentation/main_navigation_screen.dart';
+import 'package:momentum/core/theme/app_theme.dart';
 
 
 class LoginScreen extends StatefulWidget {
@@ -59,6 +62,16 @@ class _LoginScreenState extends State<LoginScreen> {
 
     }
 
+  }
+
+  void createNewLogin() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) =>
+          const CreateLoginScreen(),
+      ),
+    );
   }
 
 
@@ -128,15 +141,20 @@ class _LoginScreenState extends State<LoginScreen> {
 
               const SizedBox(height: 20),
 
-
-              TextButton(
-
-                onPressed: () {},
-
-                child: Text(
-                  "Don't have an account? Create one",
-
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+              Text(
+                style: TextStyle( color: AppTheme.primaryOrange),
+                "Don't have an account? ",
+  
               ),
+              MomentumTextButton(
+                text: "Create one",
+                onPressed: createNewLogin,
+
+                  ),
+                ],
               ),
             ],
           ),

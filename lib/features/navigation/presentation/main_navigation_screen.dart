@@ -21,14 +21,6 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
 
 
   int _selectedIndex = 0;
-  final List<Widget> _screens = [
-    DashboardScreen(), 
-    const WorkoutScreen(), 
-    HabitsScreen(), 
-    const PlannerScreen(), 
-    const ProfileScreen()
-  ];
-
 
 void _onItemTapped(int index) {
      setState((){
@@ -39,6 +31,16 @@ void _onItemTapped(int index) {
 
 @override 
 Widget build(BuildContext context) {
+
+  final List<Widget> _screens = [
+    DashboardScreen(
+      onNavigate: _onItemTapped,
+    ), 
+    const WorkoutScreen(), 
+    HabitsScreen(), 
+    const PlannerScreen(), 
+    const ProfileScreen()
+  ];
  
     return Scaffold(
 

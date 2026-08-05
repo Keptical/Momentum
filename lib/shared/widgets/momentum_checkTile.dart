@@ -21,6 +21,8 @@ class MomentumCheckbox extends StatelessWidget {
       value: completed,
       onChanged: onChanged,
       controlAffinity: ListTileControlAffinity.leading,
+      side: const BorderSide(color: AppTheme.primaryOrange,
+      width: 2),
       activeColor: AppTheme.primaryOrange,
       checkColor: Colors.white,
     );
