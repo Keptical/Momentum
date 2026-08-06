@@ -50,6 +50,7 @@ class _MomentumTextButtonState extends State<MomentumTextButton> {
                   widget.text,
                   style: const TextStyle(
                     color: AppTheme.primaryOrange,
+                    fontWeight: FontWeight.bold,
                     fontSize: 16,
             ),
           ),

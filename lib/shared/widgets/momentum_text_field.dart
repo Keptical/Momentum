@@ -32,9 +32,10 @@ class MomentumTextField extends StatelessWidget {
 
       obscureText: obscureText,
 
-
+      textAlign: TextAlign.center,
       style: const TextStyle(
         color: orange,
+
       ),
 
 

@@ -7,7 +7,6 @@ import '../../../shared/widgets/momentum_text_field.dart';
 import '../../navigation/presentation/main_navigation_screen.dart';
 import 'package:momentum/core/theme/app_theme.dart';
 
-
 class LoginScreen extends StatefulWidget {
 
   const LoginScreen({
@@ -54,6 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
+          backgroundColor: AppTheme.primaryOrange,
           content: Text(
             "Incorrect username or password",
           ),
@@ -81,6 +81,8 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
 
       body: SafeArea(
+
+        child: SingleChildScrollView(
 
         child: Padding(
 
@@ -151,12 +153,11 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               MomentumTextButton(
                 text: "Create one",
-                onPressed: createNewLogin,
 
-                  ),
-                ],
-              ),
-            ],
+                onPressed: createNewLogin,
+                    ),
+                  ],),
+            ],),
           ),
         ),
       ),

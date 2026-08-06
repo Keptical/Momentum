@@ -35,7 +35,7 @@ class HabitsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
          children: [
           
-            Text("Todays's habit's",
+            Text("Today's habit's",
                 style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                 fontSize: 20
                 ),
@@ -43,7 +43,9 @@ class HabitsScreen extends StatelessWidget {
               
               const SizedBox(height: 16),
 
-              const HabitsCard(),
+              const HabitsCard(
+                isPreview: false,
+              ),
 
               const SizedBox(height: 16),
 

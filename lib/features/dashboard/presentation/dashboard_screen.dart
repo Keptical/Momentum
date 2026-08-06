@@ -1,12 +1,10 @@
   import 'package:flutter/material.dart';
   import 'package:momentum/features/dashboard/widgets/quick_stats/quick_stats_section.dart';
   import 'package:momentum/features/dashboard/widgets/greeting_section.dart';
-  import 'package:momentum/features/dashboard/widgets/habits_preview.dart';
   import 'package:momentum/features/dashboard/widgets/momentum_graph_section.dart';
-  import 'package:momentum/features/dashboard/widgets/planner_preview.dart';
+  import 'package:momentum/features/planner/widgets/planner_card.dart';
   import 'package:momentum/features/dashboard/data/mock_dashboard_data.dart';
   import 'package:momentum/features/habits/widgets/habit_card.dart';
-  import 'package:momentum/features/habits/presentation/habits_screen.dart';
   import 'package:momentum/core/theme/app_theme.dart';
 
   class DashboardScreen extends StatelessWidget {
@@ -67,6 +65,7 @@
             //HabitsPreviewSection(habits: dashboardData.habits),
             HabitsCard(
               onTap: () => onNavigate(2),
+              isPreview: true,
             ),
             const SizedBox(height: 16),
             
@@ -79,7 +78,10 @@
 
             const SizedBox(height: 16),
 
-            PlannerPreviewSection(tasks: dashboardData.tasks),
+            PlannerCard(
+              onTap: () => onNavigate(3),
+              isPreview: true,
+            ),
             ],
             ),
           ),  

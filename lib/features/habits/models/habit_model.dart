@@ -1,6 +1,6 @@
 class Habit {
-  final String name;
-  final bool completed;
+  String name;
+  bool completed;
 
   Habit({
     required this.name,

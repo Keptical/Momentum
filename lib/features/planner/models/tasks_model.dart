@@ -1,6 +1,6 @@
 class Task {
-  final String name;
-  final bool completed;
+  String name;
+  bool completed;
 
   Task({
     required this.name,

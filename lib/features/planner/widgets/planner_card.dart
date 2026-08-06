@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:momentum/shared/widgets/momentum_card.dart';
 import 'package:momentum/shared/widgets/momentum_checktile.dart';
-import '../data/habits_data.dart';
+import '../data/planner_data.dart';
 
-class HabitsCard extends StatefulWidget {
+class PlannerCard extends StatefulWidget {
 
   final VoidCallback? onTap;
   final bool isPreview;
 
-  const HabitsCard({
+  const PlannerCard({
     super.key,
     this.onTap,
     required this.isPreview,
   });
 
   @override
-  State<HabitsCard> createState() => _HabitsCardState();
+  State<PlannerCard> createState() => _PlannerCardState();
 }
 
-class _HabitsCardState extends State<HabitsCard> {
+class _PlannerCardState extends State<PlannerCard> {
 
   @override
   Widget build(BuildContext context) {
@@ -29,20 +29,20 @@ class _HabitsCardState extends State<HabitsCard> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            ...habits.map(
-              (habit) => IgnorePointer(
+            ...tasks.map(
+                  (task) => IgnorePointer(
                 ignoring: widget.isPreview,
                 child: MomentumCheckbox(
-                  string: habit.name,
-                  completed: habit.completed,
+                  string: task.name,
+                  completed: task.completed,
                   onChanged: (value) {
                     setState(() {
-                      habit.completed = value!;
-                      });
-                    },
-                  ),
+                      task.completed = value!;
+                    });
+                  },
                 ),
               ),
+            ),
           ],
         ),
       ),
