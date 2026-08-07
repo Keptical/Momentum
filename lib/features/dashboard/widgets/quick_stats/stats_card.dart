@@ -16,24 +16,26 @@ const StatsCard({
 
   @override 
   Widget build(BuildContext context) {
-    return MomentumCard(
+    return SizedBox(
+      height: 120,
+      child: MomentumCard(
       child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Icon(icon),
 
-        const SizedBox(height: 8),
+        const SizedBox(height: 5),
 
         Text(
-        "$value",
+        "$value $label",
           style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
+            fontSize: 20,
+            //fontWeight: FontWeight.bold,
 
           ),
        ),
-       Text(label),
-       ],
+          ],
+        ),
       ),
     );
   }

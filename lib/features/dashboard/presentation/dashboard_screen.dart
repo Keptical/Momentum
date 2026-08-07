@@ -52,21 +52,21 @@
               streak: dashboardData.streak,),
 
             const SizedBox(height: 16),
-            MomentumGraphSection(
-              values: dashboardData.graphValues,
-            ),
-            const SizedBox(height: 16),
+
             Text("Today's habits",
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(
               fontSize: 20
               ),
             ),
+
             const SizedBox(height: 16),
+
             //HabitsPreviewSection(habits: dashboardData.habits),
             HabitsCard(
               onTap: () => onNavigate(2),
               isPreview: true,
             ),
+
             const SizedBox(height: 16),
             
              Text(
@@ -82,6 +82,13 @@
               onTap: () => onNavigate(3),
               isPreview: true,
             ),
+
+              const SizedBox(height: 16),
+
+              MomentumGraphSection(
+                values: dashboardData.graphValues,
+              ),
+
             ],
             ),
           ),  

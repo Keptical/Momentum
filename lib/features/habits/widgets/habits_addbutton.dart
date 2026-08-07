@@ -11,7 +11,7 @@ class HabitsAddButton extends StatelessWidget{
     Navigator.push(
       context, 
       MaterialPageRoute(
-        builder: (context) => const AddHabitScreen(),
+        builder: (context) => AddHabitScreen(),
       ),
     );
    }

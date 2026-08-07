@@ -13,29 +13,22 @@ class QuickStatsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-
+    return Column(
       children:[
 
-        Expanded(
-
-        child: StatsCard(
+        StatsCard(
           icon: Icons.local_fire_department,
           value: streak,
           label: "Day Streak",
         ),
 
-        ),
-        SizedBox(width: 12),
 
-        Expanded(
+        SizedBox(height: 16),
 
-        child: StatsCard(
+        StatsCard(
           icon: Icons.fitness_center,
           value: workouts,
           label: "Workouts this Week",
-        ),
-
         ),
       ],
       );
