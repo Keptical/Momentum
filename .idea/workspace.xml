@@ -9,15 +9,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d8bd99b-116e-4f40-b8d5-e7066216825e" name="Changes" comment="">
+    <list default="true" id="4d8bd99b-116e-4f40-b8d5-e7066216825e" name="Changes" comment="reordered dashboard page so the graph is nearer the bottom so the main viewed things such as habits &amp; tasks and started work on backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/theme/app_theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/theme/app_theme.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/dashboard/presentation/dashboard_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/dashboard/presentation/dashboard_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/dashboard/widgets/quick_stats/quick_stats_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/dashboard/widgets/quick_stats/quick_stats_section.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/dashboard/widgets/quick_stats/stats_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/dashboard/widgets/quick_stats/stats_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/habits/presentation/add_habit_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/habits/presentation/add_habit_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/habits/widgets/habits_addbutton.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/habits/widgets/habits_addbutton.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/momentum_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/momentum_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/auth/presentation/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/auth/presentation/login_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/momentum_text_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/momentum_text_field.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/windows/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786013299035</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="reordered dashboard page so the graph is nearer the bottom so the main viewed things such as habits &amp; tasks and started work on backend">
+      <option name="closed" value="true" />
+      <created>1786139349285</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1786139349285</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -121,6 +126,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created planner page, added planner card to dashboard screen, made both planner card and habits card on dashboard a preview so if pressed they navigate to their respective pages and are only previews so the checkboxes cant be interacted with and created files such as planner_data.dart etc and currently only store new data (checkbox changes) in RAM not saved anywhere yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created planner page, added planner card to dashboard screen, made both planner card and habits card on dashboard a preview so if pressed they navigate to their respective pages and are only previews so the checkboxes cant be interacted with and created files such as planner_data.dart etc and currently only store new data (checkbox changes) in RAM not saved anywhere yet" />
+    <MESSAGE value="reordered dashboard page so the graph is nearer the bottom so the main viewed things such as habits &amp; tasks and started work on backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="reordered dashboard page so the graph is nearer the bottom so the main viewed things such as habits &amp; tasks and started work on backend" />
   </component>
 </project>

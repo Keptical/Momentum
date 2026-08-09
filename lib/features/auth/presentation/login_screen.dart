@@ -104,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
               const Text(
                 "Build momentum. Every day.",
                 style: TextStyle(
-                  color: Color(0xFFFF6D00),
+                  color: AppTheme.primaryOrange,
                   fontSize: 16,
                 ),
               ),

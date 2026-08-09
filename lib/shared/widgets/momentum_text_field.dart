@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:momentum/core/theme/app_theme.dart';
 
 class MomentumTextField extends StatelessWidget {
 
@@ -23,8 +24,7 @@ class MomentumTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    const orange = Color(0xFFFF6D00);
-
+    const orange = AppTheme.primaryOrange;
 
     return TextField(
 
@@ -38,28 +38,21 @@ class MomentumTextField extends StatelessWidget {
 
       ),
 
-
       cursorColor: orange,
-
 
       decoration: InputDecoration(
 
         hintText: hint,
 
-
         hintStyle: const TextStyle(
           color: orange,
         ),
 
-
         filled: true,
 
-
         fillColor:
-            const Color(0xFF1E1E1E),
-
-
-
+            AppTheme.background,
+        
         enabledBorder: OutlineInputBorder(
 
           borderRadius:

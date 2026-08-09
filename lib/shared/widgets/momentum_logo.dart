@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:momentum/core/theme/app_theme.dart';
 
 class MomentumLogo extends StatelessWidget {
   final double size;
@@ -21,8 +22,8 @@ class MomentumLogo extends StatelessWidget {
             shape: BoxShape.circle,
             gradient: const LinearGradient(
               colors: [
-                Color(0xFFFF6D00),
-                Color(0xFFFFDBBF),
+                AppTheme.primaryOrange,
+                AppTheme.background,
               ],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
@@ -43,7 +44,7 @@ class MomentumLogo extends StatelessWidget {
           style: TextStyle(
             fontSize: 34,
             fontWeight: FontWeight.bold,
-            color: Color(0xFFFF6D00),
+            color: AppTheme.primaryOrange,
           ),
         ),
       ],
