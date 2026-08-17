@@ -1,9 +1,11 @@
 class Habit {
-  String name;
+  final String name;
+  final String id;
   bool completed;
 
   Habit({
     required this.name,
-    required this.completed,
+    required this.id,
+    this.completed = false,
   });
 }

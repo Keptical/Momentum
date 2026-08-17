@@ -7,20 +7,6 @@ final mockDashboardData = DashboardData(
   workouts: 12,
   streak: 5,
   username: 'Matt',
-  habits: [
-    Habit(
-      name: "Drink water", 
-      completed: true,
-    ),
-    Habit(
-      name: "Gym",
-      completed: false,
-    ),
-    Habit(
-      name: "Read",
-      completed: false,
-    )
-  ],
   tasks: [
     Task(
       name: "Make bed", 

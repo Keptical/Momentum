@@ -4,7 +4,8 @@ import 'package:momentum/shared/widgets/momentum_card.dart';
 import 'package:momentum/features/habits/models/habit_model.dart';
 import 'package:momentum/core/theme/app_theme.dart';
 class HabitsPreviewSection extends StatelessWidget {
-final List<Habit> habits;
+
+  final List<Habit> habits;
   const HabitsPreviewSection({
     super.key,
     required this.habits,

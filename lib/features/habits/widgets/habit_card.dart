@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:momentum/shared/widgets/momentum_card.dart';
 import 'package:momentum/shared/widgets/momentum_checktile.dart';
-import '../data/habits_data.dart';
+import '../models/habit_model.dart';
+import 'package:momentum/features/habits/data/habits_data.dart';
 
 class HabitsCard extends StatefulWidget {
 
   final VoidCallback? onTap;
   final bool isPreview;
+  final List<Habit> habits;
 
   const HabitsCard({
     super.key,
     this.onTap,
     required this.isPreview,
+    required this.habits,
   });
 
   @override
@@ -29,7 +32,7 @@ class _HabitsCardState extends State<HabitsCard> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
 
-            ...habits.map(
+            ...widget.habits.map(
               (habit) => IgnorePointer(
                 ignoring: widget.isPreview,
                 child: MomentumCheckbox(

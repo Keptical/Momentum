@@ -10,11 +10,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d8bd99b-116e-4f40-b8d5-e7066216825e" name="Changes" comment="reordered dashboard page so the graph is nearer the bottom so the main viewed things such as habits &amp; tasks and started work on backend">
+      <change afterPath="$PROJECT_DIR$/lib/services/database_service.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/shared/widgets/momentum_temppfp.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/auth/presentation/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/auth/presentation/login_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/momentum_text_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/momentum_text_field.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/windows/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/momentum_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/momentum_android.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/theme/app_theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/theme/app_theme.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/dashboard/data/mock_dashboard_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/dashboard/data/mock_dashboard_data.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/dashboard/presentation/dashboard_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/dashboard/presentation/dashboard_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/dashboard/widgets/greeting_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/dashboard/widgets/greeting_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/dashboard/widgets/habits_preview.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/dashboard/widgets/habits_preview.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/dashboard/widgets/momentum_graph_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/dashboard/widgets/momentum_graph_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/habits/data/habits_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/habits/data/habits_data.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/habits/models/habit_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/habits/models/habit_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/habits/presentation/habits_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/habits/presentation/habits_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/habits/widgets/habit_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/habits/widgets/habit_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/habits/widgets/habits_addbutton.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/habits/widgets/habits_addbutton.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/navigation/presentation/main_navigation_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/navigation/presentation/main_navigation_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/models/dashboard_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/models/dashboard_data.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/shared/widgets/momentum_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/shared/widgets/momentum_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/generated_plugin_registrant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +71,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Keptical/Momentum.git&quot;,
-    &quot;accountId&quot;: &quot;0938e23d-7cc0-4c5f-a00f-86d0c2d293f4&quot;
+    &quot;accountId&quot;: &quot;e03db5cf-941b-4007-820d-71b8b442a8ba&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -77,6 +99,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
@@ -86,9 +109,12 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;io.flutter.project.isFirstOpen&quot;: &quot;true&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/M4ttD/StudioProjects/Momentum&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
   <component name="TaskManager">

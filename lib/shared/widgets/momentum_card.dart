@@ -31,7 +31,7 @@ class MomentumCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(borderRadius),
-        border: border ?? Border.all(color: borderColor.withValues(alpha: 0.5), width: 2),
+        border: border ?? Border.all(color: borderColor, width: 2),
 
       ),
        child: child,

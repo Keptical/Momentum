@@ -5,22 +5,23 @@ import 'package:momentum/features/habits/presentation/habits_screen.dart';
 import 'package:momentum/features/planner/presentation/planner_screen.dart';
 import 'package:momentum/features/profile/presentation/profile_screen.dart';
 import 'package:momentum/features/workouts/presentation/workout_screen.dart';
+import 'package:momentum/features/habits/models/habit_model.dart';
+import 'package:momentum/features/habits/data/habits_data.dart';
 
 class MainNavigationScreen extends StatefulWidget {
   const MainNavigationScreen({
     super.key,
     });
 
-
   @override
   State<MainNavigationScreen> createState() => _MainNavigationScreenState(); 
 }
 
-
 class _MainNavigationScreenState extends State<MainNavigationScreen> {
 
-
   int _selectedIndex = 0;
+
+  final List<Habit> _habits = habits;
 
 void _onItemTapped(int index) {
      setState((){
@@ -35,9 +36,38 @@ Widget build(BuildContext context) {
   final List<Widget> _screens = [
     DashboardScreen(
       onNavigate: _onItemTapped,
+      habits: _habits,
     ), 
     const WorkoutScreen(), 
-    HabitsScreen(), 
+
+    HabitsScreen(
+      habits: _habits,
+
+      onHabitAdded: (habit) {
+        setState(() {
+          habits.add(habit);
+        });
+      },
+
+      onHabitDeleted: (habit) {
+        setState(() {
+          habits.remove(habit);
+        });
+      },
+
+      onHabitEdited: (updatedHabit) {
+        setState(() {
+          final index = habits.indexWhere(
+              (habit) => habit.id == updatedHabit.id,
+          );
+
+          if (index != -1) {
+            habits[index] = updatedHabit;
+          }
+        });
+      },
+    ),
+
     const PlannerScreen(), 
     const ProfileScreen()
   ];

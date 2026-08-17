@@ -5,15 +5,13 @@ class DashboardData {
   final List<double> graphValues;
   final int workouts, streak;
   final String username;
-  final List<Task> tasks; 
-  final List<Habit> habits;
+  final List<Task> tasks;
 
   const DashboardData({
     required this.graphValues,
     required this.workouts,
     required this.streak,
     required this.username,
-    required this.habits,
     required this.tasks,
   });
 }

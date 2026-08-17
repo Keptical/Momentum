@@ -5,14 +5,19 @@
   import 'package:momentum/features/planner/widgets/planner_card.dart';
   import 'package:momentum/features/dashboard/data/mock_dashboard_data.dart';
   import 'package:momentum/features/habits/widgets/habit_card.dart';
+  import '../../../shared/widgets/momentum_temppfp.dart';
   import 'package:momentum/core/theme/app_theme.dart';
+  import '../../../shared/widgets/momentum_logo.dart';
+  import 'package:momentum/features/habits/models/habit_model.dart';
 
   class DashboardScreen extends StatelessWidget {
+    final List<Habit> habits;
     final ValueChanged<int> onNavigate;
     
     const DashboardScreen({
       super.key,
       required this.onNavigate,
+      required this.habits,
     });
 
 
@@ -24,18 +29,21 @@
 
         appBar: AppBar(
           scrolledUnderElevation: 0,
-          title: Text(
-            "Momentum",
-            style: Theme.of(context)
-            .textTheme
-            .headlineSmall
-            ?.copyWith(
-              color: AppTheme.primaryOrange,
-              fontWeight: FontWeight.bold,
+          toolbarHeight: 30,
+          flexibleSpace: Container(
+            child: Column(
+        children:  [
+          SizedBox(height:30),
+          Row(
+            children:[
+              SizedBox(width: 30),
+              MomentumPfp(),
+                  ]
+                ),
+              ],
             ),
           ),
         ),
-
           body: SafeArea(
           bottom: false,
             child: SingleChildScrollView(
@@ -65,6 +73,7 @@
             HabitsCard(
               onTap: () => onNavigate(2),
               isPreview: true,
+              habits: habits,
             ),
 
             const SizedBox(height: 16),

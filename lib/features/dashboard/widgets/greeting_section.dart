@@ -13,12 +13,12 @@ final String username;
   @override
   Widget build(BuildContext context) {
     return MomentumCard(
-       border: Border(
-        left: BorderSide(color: AppTheme.primaryOrange, width: 0.5),
-        right: BorderSide(color: AppTheme.primaryOrange, width: 0.5),
-        top: BorderSide(color: AppTheme.primaryOrange, width: 0.5),
-        bottom: BorderSide(color: AppTheme.primaryOrange, width: 2),
-      ),
+       //border: Border(
+        //left: BorderSide(color: AppTheme.primaryOrange, width: 2),
+        //right: BorderSide(color: AppTheme.primaryOrange, width: 2),
+       // top: BorderSide(color: AppTheme.primaryOrange, width: 2),
+        //bottom: BorderSide(color: AppTheme.primaryOrange, width: 2),
+      //),
       child: Text("${"${getGreeting()} $username"}!")
       
     );

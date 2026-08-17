@@ -3,25 +3,20 @@ import 'package:momentum/features/habits/presentation/add_habit_screen.dart';
 import '../../../shared/widgets/momentum_button.dart';
 
 class HabitsAddButton extends StatelessWidget{
+
+  final VoidCallback onTap;
+
   const HabitsAddButton({
     super.key,
+    required this.onTap,
   });
-
-  void addHabitButtonPressed(BuildContext context) {
-    Navigator.push(
-      context, 
-      MaterialPageRoute(
-        builder: (context) => AddHabitScreen(),
-      ),
-    );
-   }
 
   @override
   Widget build(BuildContext context) {
 
    return MomentumButton(
     text: "Add Habit",
-    onPressed: () => addHabitButtonPressed(context),
+    onPressed: onTap,
    );
   }
 }
